@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 
 project(gzbridge)
 
@@ -17,9 +17,9 @@ set(SOURCE_FILES
 include_directories(${GAZEBO_INCLUDE_DIRS})
 link_directories(${GAZEBO_LIBRARY_DIRS})
 
-list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS}")
+list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS} --std=c++17 -Wall")
 
-add_library(gzbridge ${SOURCE_FILES} ${CMAKE_JS_SRC})
+add_library(gzbridge SHARED ${SOURCE_FILES} ${CMAKE_JS_SRC})
 
 # Gives our library file a .node extension without any "lib" prefix
 set_target_properties(gzbridge PROPERTIES PREFIX "" SUFFIX ".node")
