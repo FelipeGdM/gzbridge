@@ -20,5 +20,5 @@ wget https://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 FInally, you can install all dependencies with
 
 ```bash
-sudo apt install -y libgazebo11-dev libjansson-dev git cmake build-essential wget
+sudo apt install -y libgazebo11-dev libjansson-dev cmake build-essential
 ```
