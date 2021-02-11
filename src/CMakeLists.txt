@@ -1,29 +1,10 @@
-cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-
-project(gzbridge-test)
-
-find_package(gazebo REQUIRED)
-pkg_check_modules(jansson REQUIRED jansson)
-
-# build sources
-include_directories(${GAZEBO_INCLUDE_DIRS})
-link_directories(${GAZEBO_LIBRARY_DIRS})
-list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS}")
-
-set (sources
-  ConfigLoader.cc
-  GazeboInterface.cc
-  OgreMaterialParser.cc
-  pb2json.cc
-)
-
-add_library(gzbridge ${sources})
-
-target_link_libraries(gzbridge ${GAZEBO_LIBRARIES} ${jansson_LIBRARIES})
-
-if (UNIX)
-  target_link_libraries(gzbridge pthread)
-endif()
+#
+# This file is not currently used, refer to te root CMakeLists.txt for 
+# the building strategy
+#
+# This files configures the tests compilation for the project
+# and may be used again in the future
+#
 
 enable_testing()
 
