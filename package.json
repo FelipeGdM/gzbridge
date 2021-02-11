@@ -1,0 +1,18 @@
+{
+  "name": "gzbridge",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "description": "Nodejs bridge library for Gazebo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeGdM/gzbridge"
+  },
+  "scripts": {
+    "install": "cmake-js compile"
+  },
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "cmake-js": "^6.1.0",
+    "nan": "^2.14.2"
+  }
+}
